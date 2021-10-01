@@ -1,0 +1,35 @@
+{% setcontent webapps = 'apps' %}
+<!--application hosting section start-->
+{% if webapps is not empty %}
+<section class="appliction-hosting ptb-100 gray-light-bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-8">
+                <div class="section-heading text-center">
+                    <h2>Web Application Hosting Ready to Use CMS</h2>
+                    <p class="lead">Build your website around your favourite app. Our 1-click installer makes it easy to integrate hundreds of the latest, advanced web applications.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for webapp in webapps %}
+                <div class="col-md-6 col-lg-4 mt-4">
+                    <div class="application-icon-wrap p-5 shadow-sm bg-white rounded-lg">
+                        <img src="{{ webapp.icon ? webapp.icon : '' }}" width="45" alt="icon" class="mb-4">
+                        <div class="application-content">
+                            <h3 class="h5">{{ webapp.name ? webapp.name : '' }}</h3>
+                            <p>{{ webapp.excerpt ? webapp.excerpt ? '' }}</p>
+                            <div class="read-more-link">
+                                <a href="app/{{ webapp.slug }}" class="d-inline-flex align-items-center btn btn-sm">
+                                    <span>Read More</span> <i class="fad fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+<!--application hosting section end-->

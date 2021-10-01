@@ -1,0 +1,36 @@
+{% setcontent faqs = 'faqs' %}
+
+<!--FAQS -->
+{% if faqs is not empty %}
+<section id="faq" class="ptb-100 gray-light-bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-8">
+                <div class="section-heading text-center mb-5">
+                    <h2>Frequently Asked Queries</h2>
+                    <p>Efficiently productivate reliable paradigms before ubiquitous models. Continually utilize frictionless expertise whereas tactical relationships. Still have questions? Contact us</p>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-12 col-lg-12">
+                <div id="accordion" class="accordion faq-wrap">
+                    {% for faq in faqs %}
+                        <div class="card mb-3">
+                            <a class="card-header " data-toggle="collapse" href="#collapse0" aria-expanded="false">
+                                <h6 class="mb-0 d-inline-block">{{ faq.title }}</h6>
+                            </a>
+                            <div id="collapse0" class="collapse show" data-parent="#accordion" style="">
+                                <div class="card-body white-bg">
+                                    <p>{{ faq.body|raw }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+<!--End FAQS-->
