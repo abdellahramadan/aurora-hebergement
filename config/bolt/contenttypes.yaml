@@ -44,6 +44,13 @@ homepage:
     icon_many: "fa:home"
     icon_one: "fa:home"
 
+# Sliders
+sliders:
+    name: Sliders
+    singular_name: Slider
+    viewless: true
+    fields:
+        
 
 # Pages can be used for the more 'static' pages on your site. This content-type
 # has a 'templateselect' field, which allows you to override the record_template
@@ -140,44 +147,129 @@ entries:
     icon_one: "fa:file-alt"
 
 
-# The 'People' ContentType can be used to build pages about the people in your
-# company, organisation or any other kind of team.
+# Global Setting.
+settings:
+    name: Settings
+    singular_name: Setting
+    viewless: true
+    singleton: true
+    fields:
+        site_name: 
+            type: text
+        phone: 
+            type: text
+        email:
+            type: email
+        site_logo:
+            type: image
+        footer_text:
+            type: redactor
+            
+            
+# Mixed settings
+others:
+    name: Others
+    singular_name: Other
+    singleton: true
+    viewless: true
+    fields:
+        plan_title:
+            type: text
+        plan_body:
+            type: redactor
+        web_app_title:
+            type: text
+        web_app_body:
+            type: redactor
+        faqs_title:
+            type: text
+        faqs_body:
+            type: redactor
+        cta2_title:
+            type: text
+        cta2_body:
+            type: text
+        cta2_image:
+            type: image
+        
+# Plan: Different plan we offer such as Standard, Ultimate, and Premium
 
-people:
-    name: People
-    singular_name: Person
-    title_format: "{name} ({description})"
+plans:
+    name: Plans
+    singular_name: Plan
+    viewless: true
+    show_on_dashboard: true
+    default_status: published
+    searchable: false
+    order: -publishedAt
     fields:
         name:
             type: text
-            class: large
-            variant: inline
-            fixture_format: '{name}'
-        description:
-            type: text
-            variant: inline
-            postfix: This person's job description, title or somesuch
-            fixture_format: '{jobTitle}'
-        email:
-            type: text
-            variant: inline
-            fixture_format: '{safeEmail}'
-        image:
+        image: 
             type: image
-        content:
+        teaser: 
             type: redactor
-        contentlink:
+        description:
+            type: html
+        space:
             type: text
-            label: Link
-            placeholder: 'contentType/slug or https://example.org/'
-            postfix: "Use this to add a link for this Person. This could either be an 'internal' link like <tt>page//about</tt>, if you use a contentType/slug combination. Otherwise use a proper URL, like `https://example.org`. If left blank, it'll default to the internal link to this Record's detail page."
-            fixture_format: '{url}'
-        slug:
-            type: slug
-            uses: [ name ]
-    icon_one: fa:user
-    icon_many: fa:users
+        bandwidth:
+            type: text
+        email: 
+            type: text
+        domain: 
+            type: text
+        support:
+            type: text
+        uptime:
+            type: text
+        price:
+            type: number
 
+# Webapps we Host
+apps:
+    name: Apps
+    singular_name: App
+    fields:
+        name: 
+            type: text
+        excerpt:
+            type: redactor
+        description:
+            type: redactor
+        icon:
+            type: image
+        slug: 
+            type: text
+            
+# CTA 
+cta:
+    name: cta
+    singular_name: cta
+    viewless: true
+    singleton: true
+    fields:
+        title:
+            type: text
+        body:
+            type: html
+        url:
+            type: text
+        url_text:
+            type: text
+        image: 
+            type: image
+
+# FAQs
+faqs:
+    name: Faqs
+    singular_name: Faq
+    viewless: true
+    fields:
+        title:
+            type: text
+        body:
+            type: redactor
 
 # The 'Blocks' ContentType is a so-called 'resource ContentType'. This means
 # that it can be used to manage smaller pieces of content, like the 'about us'

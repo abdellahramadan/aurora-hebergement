@@ -1,3 +1,4 @@
+{% setcontent plans = 'plans' %}
 <!--pricing section start-->
 <section id="pricing" class="pricing-section ptb-100 ">
     <div class="container">
@@ -14,27 +15,28 @@
             </div>
         </div>
         <div class="row align-items-center justify-content-md-center justify-content-center">
-            <div class="col-lg-4 col-md-6 col-sm-8">
+            {% for plan in plans %}
+                <div class="col-lg-4 col-md-6 col-sm-8">
                 <div class="popular-price bg-white pricing-new-wrapper mt-4 p-5 shadow-sm border">
                     <div class="pricing-price d-flex justify-content-between align-items-center pb-4">
                         <span class="p-icon"><i class="fad fa-rocket color-secondary"></i></span>
-                        <div class="h2 mb-0 text-dark">$5.99 <span class="price-cycle h5">/mo</span></div>
+                        <div class="h2 mb-0 text-dark"><span class="price-cycle h6">XAF</span> {{ plan.price ? plan.price : ''}} <span class="price-cycle h5">/an</span></div>
                     </div>
                     <div class="pricing-info">
-                        <h5>Starter</h5>
-                        <p class="text-muted">High performance, low cost hosting with SSD for the perfect starter plan.</p>
+                        <h5>{{ plan.name }}</h5>
+                        <p class="text-muted">{{ plan.teaser ? plan.teaser : '' }}</p>
                     </div>
                     <div class="pricing-content">
                         <ul class="list-unstyled pricing-feature-list-2 mt-4">
                             <li><i class="far fa-hdd mr-2"></i>
-                                <p><strong>5GB</strong> SSD Disk Space</p>
+                                <p><strong>Espace SSD</strong> {{ plan.space }}</p>
                                 <span class="text-under-line" data-toggle="tooltip" data-placement="top" title="" data-original-title="SSD based cloud storage for awesome performance and reliability for your website."><i class="fad fa-info-circle ml-1"></i></span>
                             </li>
                             <li><i class="far fa-router mr-2"></i>
-                                <p><strong>Unmetered</strong> Brandwidth</p>
+                                <p><strong>Bande Passante</strong> {{ plan.bandwidth }}</p>
                             </li>
                             <li><i class="far fa-browser mr-2"></i>
-                                <p><strong>Host 2</strong> Websites Hosted</p>
+                                <p><strong>E-mail</strong> {{ plan.email }}</p>
                             </li>
                             <li><i class="far fa-mail-bulk mr-2"></i>
                                 <p><strong>Unlimited</strong> Emails Accounts</p>
@@ -42,113 +44,24 @@
                             </li>
 
                             <li><i class="far fa-globe mr-2"></i>
-                                <p><strong>Free</strong> Domain Name</p>
+                                <p><strong>Domaine</strong> {{ plan.domain }}</p>
                                 <span class="text-under-line" data-toggle="tooltip" data-placement="top" title="" data-original-title="On annual plans or higher. First year only."><i class="fad fa-info-circle ml-1"></i></span>
                             </li>
 
                             <li><i class="far fa-headset mr-2"></i>
-                                <p><strong>24/7</strong> Technical Support</p>
+                                <p><strong>Support</strong> {{ plan.support }}</p>
                             </li>
 
                             <li><i class="far fa-upload mr-2"></i>
-                                <p><strong>99.9%</strong> Uptime Guarantee</p>
+                                <p><strong>Disponibilité</strong> {{ plan.uptime }}</p>
                             </li>
                         </ul>
-                        <a href="pricing-specifications.html" class="mb-4 d-block">Full specifications <i class="far fa-arrow-right pl-2"></i></a>
+                        <a href="#" class="mb-4 d-block">Full specifications <i class="far fa-arrow-right pl-2"></i></a>
                         <a href="#" class="btn btn-outline-brand-01 btn-block" target="_blank">Purchase Now</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-8">
-                <div class="popular-price bg-white pricing-new-wrapper mt-4 p-5 shadow-sm border">
-                    <div class="pricing-price d-flex justify-content-between align-items-center pb-4">
-                        <span class="p-icon"><i class="fad fa-space-shuttle color-secondary"></i></span>
-                        <div class="h2 mb-0 text-dark">$8.99 <span class="price-cycle h5">/mo</span></div>
-                    </div>
-                    <div class="pricing-info">
-                        <h5>Starter</h5>
-                        <p class="text-muted">High performance, low cost hosting with SSD for the perfect starter plan.</p>
-                    </div>
-                    <div class="pricing-content">
-                        <ul class="list-unstyled pricing-feature-list-2 mt-4">
-                            <li><i class="far fa-hdd mr-2"></i>
-                                <p><strong>5GB</strong> SSD Disk Space</p>
-                                <span class="text-under-line" data-toggle="tooltip" data-placement="top" title="" data-original-title="SSD based cloud storage for awesome performance and reliability for your website."><i class="fad fa-info-circle ml-1"></i></span>
-                            </li>
-                            <li><i class="far fa-router mr-2"></i>
-                                <p><strong>Unmetered</strong> Brandwidth</p>
-                            </li>
-                            <li><i class="far fa-browser mr-2"></i>
-                                <p><strong>Host 2</strong> Websites Hosted</p>
-                            </li>
-                            <li><i class="far fa-mail-bulk mr-2"></i>
-                                <p><strong>Unlimited</strong> Emails Accounts</p>
-                                <span class="text-under-line" data-toggle="tooltip" data-placement="top" title="" data-original-title="Create an unlimited number of mailboxes at no extra cost."><i class="fad fa-info-circle ml-1"></i></span>
-                            </li>
-
-                            <li><i class="far fa-globe mr-2"></i>
-                                <p><strong>Free</strong> Domain Name</p>
-                                <span class="text-under-line" data-toggle="tooltip" data-placement="top" title="" data-original-title="On annual plans or higher. First year only."><i class="fad fa-info-circle ml-1"></i></span>
-                            </li>
-
-                            <li><i class="far fa-headset mr-2"></i>
-                                <p><strong>24/7</strong> Technical Support</p>
-                            </li>
-
-                            <li><i class="far fa-upload mr-2"></i>
-                                <p><strong>99.9%</strong> Uptime Guarantee</p>
-                            </li>
-                        </ul>
-                        <a href="pricing-specifications.html" class="mb-4 d-block">Full specifications <i class="far fa-arrow-right pl-2"></i></a>
-                        <a href="#" class="btn btn-brand-01 btn-block" target="_blank">Purchase Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-8">
-                <div class="popular-price bg-white pricing-new-wrapper mt-4 p-5 shadow-sm border">
-                    <div class="pricing-price d-flex justify-content-between align-items-center pb-4">
-                        <span class="p-icon"><i class="fad fa-starship color-secondary"></i></span>
-                        <div class="h2 mb-0 text-dark">$12.99 <span class="price-cycle h5">/mo</span></div>
-                    </div>
-                    <div class="pricing-info">
-                        <h5>Starter</h5>
-                        <p class="text-muted">High performance, low cost hosting with SSD for the perfect starter plan.</p>
-                    </div>
-                    <div class="pricing-content">
-                        <ul class="list-unstyled pricing-feature-list-2 mt-4">
-                            <li><i class="far fa-hdd mr-2"></i>
-                                <p><strong>5GB</strong> SSD Disk Space</p>
-                                <span class="text-under-line" data-toggle="tooltip" data-placement="top" title="" data-original-title="SSD based cloud storage for awesome performance and reliability for your website."><i class="fad fa-info-circle ml-1"></i></span>
-                            </li>
-                            <li><i class="far fa-router mr-2"></i>
-                                <p><strong>Unmetered</strong> Brandwidth</p>
-                            </li>
-                            <li><i class="far fa-browser mr-2"></i>
-                                <p><strong>Host 2</strong> Websites Hosted</p>
-                            </li>
-                            <li><i class="far fa-mail-bulk mr-2"></i>
-                                <p><strong>Unlimited</strong> Emails Accounts</p>
-                                <span class="text-under-line" data-toggle="tooltip" data-placement="top" title="" data-original-title="Create an unlimited number of mailboxes at no extra cost."><i class="fad fa-info-circle ml-1"></i></span>
-                            </li>
-
-                            <li><i class="far fa-globe mr-2"></i>
-                                <p><strong>Free</strong> Domain Name</p>
-                                <span class="text-under-line" data-toggle="tooltip" data-placement="top" title="" data-original-title="On annual plans or higher. First year only."><i class="fad fa-info-circle ml-1"></i></span>
-                            </li>
-
-                            <li><i class="far fa-headset mr-2"></i>
-                                <p><strong>24/7</strong> Technical Support</p>
-                            </li>
-
-                            <li><i class="far fa-upload mr-2"></i>
-                                <p><strong>99.9%</strong> Uptime Guarantee</p>
-                            </li>
-                        </ul>
-                        <a href="pricing-specifications.html" class="mb-4 d-block">Full specifications <i class="far fa-arrow-right pl-2"></i></a>
-                        <a href="#" class="btn btn-outline-brand-01 btn-block" target="_blank">Purchase Now</a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
             <div class="col-12">
                 <div class="support-cta text-center mt-5">
                     <a href="pricing-comparision.html" target="_blank">
