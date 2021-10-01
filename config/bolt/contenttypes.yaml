@@ -50,7 +50,30 @@ sliders:
     singular_name: Slider
     viewless: true
     fields:
-        
+        sub_title:
+            type: text
+            label: Small title at the top
+        title:
+            type: text
+        link_text:
+            type: text
+        link:
+            type: text
+        image:
+            type: image
+        background_image:
+            type: image
+
+# Features
+features:
+    name: Features
+    singular_name: Feature
+    viewless: true
+    fields:
+        title:
+            type: text
+        description:
+            type: text
 
 # Pages can be used for the more 'static' pages on your site. This content-type
 # has a 'templateselect' field, which allows you to override the record_template
