@@ -1,8 +1,29 @@
 {% setcontent hebergements = 'hebergements' %}
+{% setcontent settings = 'others' %}
 
 {% extends 'partials/_master.twig' %}
 
 {% block main %}
+    <!--hero section start-->
+    <section class="ptb-120 gradient-bg">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-7 col-lg-6">
+                    <div class="hero-content-wrap text-white">
+                        <h1 class="text-white">{{ settings.hostings_title ?? '' }}</h1>
+                        <p class="lead">{{ settings.hostings_desc ?? '' }}</p>
+                        <a href="{{ settings.hostings_link ?? '#' }}" class="btn btn-brand-03 btn-lg">{{ settings.hostings_link_text ?? '' }}</a>
+                    </div>
+                </div>
+                <div class="col-md-5 col-lg-6">
+                    <div class="img-wrap">
+                        <img src="{{ settings.hostings_image ?? '' }}" alt="vps image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--hero section end-->
     {% if hebergements is not empty %}
         <!--feature section start-->
         {% for hebergement in hebergements %}

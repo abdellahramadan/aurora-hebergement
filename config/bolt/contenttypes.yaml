@@ -214,7 +214,17 @@ others:
             type: text
         cta2_image:
             type: image
-        
+        hostings_title:
+            type: text
+        hostings_desc:
+            type: text
+        hostings_link:
+            type: text
+        hostings_link_text:
+            type: text
+        hostings_image:
+            type: image
+            
 # Plan: Different plan we offer such as Standard, Ultimate, and Premium
 
 plans:
@@ -248,6 +258,29 @@ plans:
             type: text
         price:
             type: number
+
+# Packages
+hebergements:
+    name: Hebergements
+    singular_name: Herbergement
+    record_template: hebergement.twig
+    fields:
+        name:
+            type: text
+        title:
+            type: text
+        excerpt:
+            type: text
+        description:
+            type: html
+        image:
+            type: image
+        slug:
+            type: text
+            uses: name
+        link_text:
+            type: text
+        
 
 # Webapps we Host
 apps:

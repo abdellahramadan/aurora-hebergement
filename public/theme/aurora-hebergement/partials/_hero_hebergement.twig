@@ -1,0 +1,21 @@
+{% setcontent hebergement = 'hebergements/' %}
+<!--hero section start-->
+<section class="ptb-120 gradient-bg">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-md-7 col-lg-6">
+                <div class="hero-content-wrap text-white">
+                    <h1 class="text-white">{{ hebergement.name ?? '' }}</h1>
+                    <p class="lead">{{ hebergement.excerpt ?? '' }}</p>
+                    <a href="#" class="btn btn-brand-03 btn-lg">Contactez-nous</a>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-6">
+                <div class="img-wrap">
+                    <img src="{{ hebergement.image ?? '' }}" alt="vps image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--hero section end-->
