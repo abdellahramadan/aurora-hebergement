@@ -1,15 +1,14 @@
 {% setcontent plans = 'plans' %}
+{% setcontent settings = 'others' %}
 <!--pricing section start-->
 <section id="pricing" class="pricing-section ptb-100 ">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-9 col-lg-8">
                 <div class="section-heading text-center mb-4">
-                    <h2>Choose Your Web Hosting Plan</h2>
+                    <h2>{{ settings.plan_title }}</h2>
                     <p class="lead">
-                        Professional hosting at an affordable price. Distinctively recaptiualize principle-centered
-                        core competencies through client-centered
-                        core competencies.
+                        {{ settings.plan_body }}
                     </p>
                 </div>
             </div>
