@@ -264,6 +264,7 @@ hebergements:
     name: Hebergements
     singular_name: Herbergement
     record_template: hebergement.twig
+    listing_template: hebergements.twig
     fields:
         name:
             type: text

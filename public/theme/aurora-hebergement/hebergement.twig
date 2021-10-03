@@ -1,5 +1,80 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main %}
-    {{ include('partials/_hero_hebergement.twig') }}
+
+    {% include('partials/_hero_hebergement.twig') %}
+
+    <!--feature section start-->
+    <section class="feature-section ptb-100 gray-light-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9 col-lg-8">
+                    <div class="section-heading text-center mb-5">
+                        <h2>Our VPS Hosting Platform Best Features</h2>
+                        <p class="lead">Uniquely restore open-source products via open-source relationships.
+                            Enthusiastically deliver competitive systems and client-centric.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6 col-lg-6">
+                    <div class="cta-new-wrap">
+                        <div class="feature-feature-list py-3">
+                            <span class="ti-harddrives icon-size-md d-block color-primary mb-3"></span>
+                            <h5 class="mb-2">SSD Disk Drives</h5>
+                            <p>You can never go wrong with our own top-notch dedicated servers loaded Credibly network leading-edge services vis-a-vis world-class niches. Seamlessly visualize end-to-end web-readiness </p>
+                        </div>
+                        <div class="feature-feature-list py-3">
+                            <span class="ti-rss-alt icon-size-md d-block color-primary mb-3"></span>
+                            <h5 class="mb-2">100 Mb/s Network</h5>
+                            <p>We can guarantee an excellent experience and loading time for your successful Energistically synthesize just in time paradigms after resource-leveling e-business plagiarize cross-unit information</p>
+                        </div>
+                        <div class="feature-feature-list py-3">
+                            <span class="ti-lock icon-size-md d-block color-primary mb-3"></span>
+                            <h5 class="mb-2">DDoS Protection</h5>
+                            <p>With full root access you will be able to take full control of your server very easy Holisticly repurpose granular models and go forward schemas. Professionally scale magnetic portals before </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="cta-new-wrap">
+                        <img src="assets/img/vps-feature-img-1.png" alt="hosting" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between mt-5">
+                <div class="col-md-6 col-lg-6">
+                    <div class="cta-new-wrap">
+                        <img src="assets/img/vps-feature-img-2.png" alt="hosting" class="img-fluid" />
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="cta-new-wrap">
+                        <div class="feature-feature-list py-3">
+                            <span class="ti-world icon-size-md d-block color-primary mb-3"></span>
+                            <h5 class="mb-2">Dedicated IP</h5>
+                            <p>One of many premium features is a dedicated IP cheapest VPS hosting plan Authoritatively formulate user-centric sources without emerging best practices. Monotonectally morph an expanded </p>
+                        </div>
+                        <div class="feature-feature-list py-3">
+                            <span class="ti-location-pin icon-size-md d-block color-primary mb-3"></span>
+                            <h5 class="mb-2">IPv6 Support</h5>
+                            <p>Our VPS hosting plan is fully packed with dedicated IPv6 Internet protocol IP Progressively maximize standardized catalysts for change via diverse initiatives. Monotonectally underwhelm</p>
+                        </div>
+                        <div class="feature-feature-list py-3">
+                            <span class="ti-wallet icon-size-md d-block color-primary mb-3"></span>
+                            <h5 class="mb-2">Money-back Guarantee</h5>
+                            <p>If you’re not 100% satisfied with Hostlar, we’ll refund your payment no risk Interactively administrate wireless results via cooperative mindshare. Completely benchmark process-centric sources and high standards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--feature section end-->
+
+    {% include('partials/_plans.twig') %}
+
+    {% include('partials/_CTA.twig') %}
+
+    {% include('partials/_features.twig') %}
 {% endblock main %}
