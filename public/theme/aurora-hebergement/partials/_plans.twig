@@ -1,4 +1,4 @@
-{% setcontent plans = 'plans' %}
+{% setcontent plans = 'plans' orderby 'createdAt'%}
 {% setcontent settings = 'others' %}
 <!--pricing section start-->
 <section id="pricing" class="pricing-section ptb-100 ">
@@ -61,6 +61,7 @@
                 </div>
             </div>
             {% endfor %}
+            {#
             <div class="col-12">
                 <div class="support-cta text-center mt-5">
                     <a href="pricing-comparision.html" target="_blank">
@@ -69,6 +70,7 @@
                     </a>
                 </div>
             </div>
+            #}
         </div>
     </div>
 </section>

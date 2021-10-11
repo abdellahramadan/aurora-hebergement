@@ -7,7 +7,7 @@
             <nav class="js-mega-menu navbar navbar-expand-md header-nav">
 
                 <!--logo start-->
-                <a class="navbar-brand pt-0" href="{{ path('homepage') }}"><img src="{{ settings.site_logo ?? '' }}" alt="logo" class="img-fluid" /></a>
+                <a class="navbar-brand pt-0" href="{{ path('homepage') }}"><img src="{{ settings.site_logo ?? '' }}" alt="logo" class="img-fluid" width="100" height="100" /></a>
                 <!--logo end-->
 
                 <!--responsive toggle button start-->
@@ -18,6 +18,7 @@
                 </button>
                 <!--responsive toggle button end-->
 
+                {#
                 <!--main menu start-->
                 <div id="navBar" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto main-navbar-nav">
@@ -443,6 +444,7 @@
                     </ul>
                 </div>
                 <!--main menu end-->
+                #}
             </nav>
         </div>
     </div>
