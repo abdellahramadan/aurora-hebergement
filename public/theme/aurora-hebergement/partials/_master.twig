@@ -4,16 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  {# make sure we always display a proper title: The record's title if there is one, appended with the
-  sitename. If there is no title, we append the sitename with the payoff, if there is one. #}
+  {{ seo.metatags() }}
   <title>
-    {%- if record|default and record.title -%}
-    {{- record.title ~ ' | ' -}}
-    {%- endif -%}
-    {{- config.get('general/sitename') -}}
-    {%- if record|default == null and config.has('general/payoff') -%}
-    {{- ' | ' ~ config.get('general/payoff') -}}
-    {%- endif -%}
+      {{ seo.title() }}
   </title>
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -32,7 +25,7 @@
 {% include 'partials/_menu.twig' %}
 <div class="main">
   {% block main %}
-  (This is <code>block main</code>)
+
   {% endblock main %}
 </div>
 

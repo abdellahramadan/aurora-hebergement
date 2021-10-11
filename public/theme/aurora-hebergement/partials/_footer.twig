@@ -1,5 +1,6 @@
 {% setcontent settings = 'settings' %}
 <!--footer section start-->
+{#
 <footer class="footer-1 ptb-60 gradient-bg">
     <div class="container">
         <div class="row">
@@ -104,7 +105,7 @@
     </div>
     <!--end of container-->
 </footer>
-
+#}
 <!--footer bottom copyright start-->
 <div class="footer-bottom py-3 gray-light-bg">
     <div class="container">
@@ -113,7 +114,8 @@
                 <div class="copyright-wrap small-text">
                     <p class="mb-0">&copy; {{ 'now'|date('Y')}} Aurora Hosting, All rights reserved</p>
                 </div>
-            </div>
+
+                {#
             <div class="col-md-6 col-lg-5">
                 <div class="terms-policy-wrap text-lg-right text-md-right text-left">
                     <ul class="list-inline">
@@ -122,6 +124,7 @@
                     </ul>
                 </div>
             </div>
+            #}
         </div>
     </div>
 </div>

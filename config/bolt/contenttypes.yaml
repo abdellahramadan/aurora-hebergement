@@ -43,6 +43,9 @@ homepage:
     singleton: true
     icon_many: "fa:home"
     icon_one: "fa:home"
+    seo:
+        type: seo
+        group: "SEO Settings"
 
 # Sliders
 sliders:
@@ -74,46 +77,6 @@ features:
             type: text
         description:
             type: text
-
-# Pages can be used for the more 'static' pages on your site. This content-type
-# has a 'templateselect' field, which allows you to override the record_template
-# setting for an individual page.
-# The taxonomy for this ContentType is defined as 'groups', which is a so-called
-# "grouping taxonomy". This way you can easily group sets of pages that logically
-# belong together. If your site has a 'services' section, in which you'd like to
-# list the different types of services a company provides, you can group these
-# together.
-
-pages:
-    name: Pages
-    singular_name: Page
-    fields:
-        title:
-            type: text
-            class: large
-            group: content
-        teaser:
-            type: textarea
-            postfix: |
-                A text-only version of the content, that can be used to "tease"
-                the content when it's used in listing pages or search results.
-        image:
-            type: image
-            label: Highlighted image
-        body:
-            type: redactor
-            height: 300px
-        slug:
-            type: slug
-            uses: title
-            group: Meta
-        template:
-            type: templateselect
-            filter: '/^[^_].*\.twig$/'
-    taxonomy: [ groups ]
-    records_per_page: 5
-    order: id
-
 
 # Entries can be used for things like 'news' or 'blogpostings'. They have a
 # 'teaser', which can be used for a short blurb on listing-pages, allowing
@@ -281,6 +244,9 @@ hebergements:
             uses: name
         link_text:
             type: text
+        seo:
+            type: seo
+            group: "SEO Settings"
         
 
 # Webapps we Host
@@ -298,6 +264,9 @@ apps:
             type: image
         slug: 
             type: text
+        seo:
+            type: seo
+            group: "SEO Settings"
             
 # CTA 
 cta:
