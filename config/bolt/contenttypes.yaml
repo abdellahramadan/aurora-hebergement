@@ -76,61 +76,11 @@ features:
         title:
             type: text
         description:
+            type: redactor
+        icon:
             type: text
-
-# Entries can be used for things like 'news' or 'blogpostings'. They have a
-# 'teaser', which can be used for a short blurb on listing-pages, allowing
-# visitors to click-through to the rest of the entry. It also has fields for an
-# image and an optional video embed.
-# A relation is defined to the pages ContentType. This way you can refer to a
-# page from your news-item.
-# This ContentType defines 'categories' and 'tags' as taxonomies, allowing the
-# editor to use both to categorize a specific entry.
-# The 'order' is set to '-datepublish', which means that newer entries will be
-# shown above older entries.
-
-entries:
-    name: Entries
-    singular_name: Entry
-    fields:
-        title:
-            type: text
-            class: large
-            group: Entry
         teaser:
-            type: textarea
-            postfix: |
-                A text-only version of the content, that can be used to "tease"
-                the content when it's used in listing pages or search results.
-        image:
-            type: image
-            upload: entries
-        body:
-            type: article
-        video:
-            type: embed
-        slug:
-            type: slug
-            uses: title
-            group: Meta
-    relations:
-        pages:
-            multiple: false
-            order: title
-            label: Select a page
-        people:
-            multiple: false
-            label: Author of this Entry
-            required: false
-    taxonomy: [ categories, tags, groups ]
-    record_template: entry.twig
-    listing_template: listing.twig
-    listing_records: 10
-    default_status: published
-    order: -publishedAt
-    records_per_page: 10
-    icon_many: "fa:file-alt"
-    icon_one: "fa:file-alt"
+            type: text
 
 
 # Global Setting.
@@ -161,24 +111,29 @@ others:
     fields:
         plan_title:
             type: text
+            group: 'Plan'
         plan_body:
             type: redactor
         web_app_title:
             type: text
+            group: 'Web App'
         web_app_body:
             type: redactor
         faqs_title:
             type: text
+            group: 'FAQs'
         faqs_body:
             type: redactor
         cta2_title:
             type: text
+            group: 'CTA'
         cta2_body:
             type: text
         cta2_image:
             type: image
         hostings_title:
             type: text
+            group: 'Hosting'
         hostings_desc:
             type: text
         hostings_link:
@@ -297,6 +252,7 @@ faqs:
         body:
             type: redactor
 
+
 # The 'Blocks' ContentType is a so-called 'resource ContentType'. This means
 # that it can be used to manage smaller pieces of content, like the 'about us'
 # text, an 'our address' in the footer, or similar short blurbs of text.
@@ -336,58 +292,6 @@ blocks:
     order: title
     icon_many: "fa:cubes"
     icon_one: "fa:cube"
-
-
-# The 'Products' ContentType can be used to manage information about the
-# products or services you (or your company, organisation) provide.
-
-products:
-    name: Products
-    singular_name: Product
-    fields:
-        title:
-            type: text
-            class: large
-            variant: inline
-            label: Name of this product
-            group: Block
-            fixture_format: '{catchPhrase}'
-        feature_1:
-            type: text
-            variant: inline
-            fixture_format: '{bs}'
-            label: "Key feature 1"
-        feature_2:
-            type: text
-            variant: inline
-            fixture_format: '{bs}'
-            label: "Key feature 2"
-        feature_3:
-            type: text
-            variant: inline
-            fixture_format: '{bs}'
-            label: "Key feature 3"
-        price:
-            type: text
-            fixture_format: "€ {randomDigitNotNull}0,-"
-        image:
-            type: image
-        teaser:
-            type: redactor
-            fixture_format: '{paragraph}'
-        content:
-            type: redactor
-        slug:
-            type: slug
-            uses: [ title ]
-            group: Meta
-    show_on_dashboard: true
-    viewless: false
-    default_status: published
-    searchable: false
-    order: title
-    icon_many: "fa:gifts"
-    icon_one: "fa:gift"
 
 # Possible field types:
 #

@@ -10,12 +10,12 @@
                     <p>{{ cta.body|raw }} </p>
                 </div>
                 <div class="action-btns mt-4">
-                    <a href="#" class="btn btn-brand-03">{{ cta.url_text}} </a>
+                    <a href="#" class="btn btn-brand-03">{{ cta.url_text ?? '' }} </a>
                 </div>
             </div>
             <div class="col-md-5 col-lg-4">
                 <div class="cta-img-wrap text-center">
-                    <img src="{{ cta.image }}" class="img-fluid" alt="server room">
+                    <img src="{{ cta.image ?? '' }}" class="img-fluid" alt="server room">
                 </div>
             </div>
         </div>
