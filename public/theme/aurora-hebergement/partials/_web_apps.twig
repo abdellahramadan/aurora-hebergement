@@ -1,4 +1,5 @@
 {% setcontent webapps = 'apps' %}
+{% setcontent others = 'others' %}
 <!--application hosting section start-->
 {% if webapps is not empty %}
 <section class="appliction-hosting ptb-100 gray-light-bg">
@@ -6,8 +7,8 @@
         <div class="row justify-content-center">
             <div class="col-md-9 col-lg-8">
                 <div class="section-heading text-center">
-                    <h2>Web Application Hosting Ready to Use CMS</h2>
-                    <p class="lead">Build your website around your favourite app. Our 1-click installer makes it easy to integrate hundreds of the latest, advanced web applications.</p>
+                    <h2>{{ others.web_app_title ?? '' }}</h2>
+                    <p class="lead">{{ others.web_app_body ?? '' }}</p>
                 </div>
             </div>
         </div>

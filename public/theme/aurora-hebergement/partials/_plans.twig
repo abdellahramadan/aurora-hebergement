@@ -43,20 +43,20 @@
                             </li>
 
                             <li><i class="far fa-globe mr-2"></i>
-                                <p><strong>Domaine</strong> {{ plan.domain }}</p>
+                                <p><strong>Domaine</strong> {{ plan.domain ?? '' }}</p>
                                 <span class="text-under-line" data-toggle="tooltip" data-placement="top" title="" data-original-title="On annual plans or higher. First year only."><i class="fad fa-info-circle ml-1"></i></span>
                             </li>
 
                             <li><i class="far fa-headset mr-2"></i>
-                                <p><strong>Support</strong> {{ plan.support }}</p>
+                                <p><strong>Support</strong> {{ plan.support ?? '' }}</p>
                             </li>
 
                             <li><i class="far fa-upload mr-2"></i>
-                                <p><strong>Disponibilité</strong> {{ plan.uptime }}</p>
+                                <p><strong>Disponibilité</strong> {{ plan.uptime ?? '' }}</p>
                             </li>
                         </ul>
-                        <a href="#" class="mb-4 d-block">Full specifications <i class="far fa-arrow-right pl-2"></i></a>
-                        <a href="#" class="btn btn-outline-brand-01 btn-block" target="_blank">Purchase Now</a>
+                        {#<a href="#" class="mb-4 d-block">Full specifications <i class="far fa-arrow-right pl-2"></i></a>
+                        <a href="#" class="btn btn-outline-brand-01 btn-block" target="_blank">Purchase Now</a>#}
                     </div>
                 </div>
             </div>
